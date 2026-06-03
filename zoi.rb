@@ -1,31 +1,31 @@
 # Maintainer: ZilloweZ <zillowez@gmail.com>
 
 class Zoi < Formula
-  desc "Universal Package Manager & Environment Setup Tool"
-  homepage "https://gitlab.com/Zillowe/Zillwen/Zusty/Zoi"
-  version "1.15.0"
+  desc "Advanced Package Manager & Environment Orchestrator"
+  homepage "https://gitlab.com/zillowe/zillwen/zusty/zoi"
+  version "1.16.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://gitlab.com/Zillowe/Zillwen/Zusty/Zoi/-/releases/Prod-Release-#{version}/downloads/zoi-macos-arm64.tar.zst"
-      sha256 "264254990c27fbb9379b45767922040e9447234f3f62becc0b2812904194e084"
+      url "https://gitlab.com/zillowe/zillwen/zusty/zoi/-/releases/Prod-Release-#{version}/downloads/zoi-macos-arm64.tar.zst"
+      sha256 "e2bef409750aac783cb97d7a9fdbaecc997a55b7d17a4c07589d05630ba2e4f5"
     end
 
     if Hardware::CPU.intel?
-      url "https://gitlab.com/Zillowe/Zillwen/Zusty/Zoi/-/releases/Prod-Release-#{version}/downloads/zoi-macos-amd64.tar.zst"
-      sha256 "7355ce590fab70777e23df783c7a9d66eab09acaec719fa2c1070d802406fc82"
+      url "https://gitlab.com/zillowe/zillwen/zusty/zoi/-/releases/Prod-Release-#{version}/downloads/zoi-macos-amd64.tar.zst"
+      sha256 "e5d1e9c31d04c936720beb0dbe3d3e4a754550f8456185927fdca92eeb59f8a5"
     end
 
     on_linux do
       if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-        url "https://gitlab.com/Zillowe/Zillwen/Zusty/Zoi/-/releases/Prod-Release-#{version}/downloads/zoi-linux-amd64.tar.zst"
-        sha256 "a8db719baa92924914d6609c1e248f88c5c99944dfff184036df21954a4014c4"
+        url "https://gitlab.com/zillowe/zillwen/zusty/zoi/-/releases/Prod-Release-#{version}/downloads/zoi-linux-amd64.tar.zst"
+        sha256 "64210922e29e05518d3021c5b1ba914c819516a4e01c6ed1ae7a020c5ec4ac67"
       end
 
       if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-        url "https://gitlab.com/Zillowe/Zillwen/Zusty/Zoi/-/releases/Prod-Release-#{version}/downloads/zoi-linux-arm64.tar.zst"
-        sha256 "c9c88c2d0a8e8ec1af67e8a1b38ae12011b0b6b3bba75b9225a3175ac49f2de9"
+        url "https://gitlab.com/zillowe/zillwen/zusty/zoi/-/releases/Prod-Release-#{version}/downloads/zoi-linux-arm64.tar.zst"
+        sha256 "e0e88b3fb20536148e64f72d626fe34a17432ab92ecabec8919a3a6f167ff4e8"
       end
     end
 
