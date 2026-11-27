@@ -3,46 +3,46 @@
 class Zoi < Formula
   desc "Advanced Package Manager & Environment Orchestrator"
   homepage "https://gitlab.com/zillowe/zillwen/zusty/zoi"
-  version "1.29.17"
+  version "1.29.20"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://gitlab.com/zillowe/zillwen/zusty/zoi/-/releases/Prod-Release-#{version}/downloads/zoi-macos-arm64.tar.zst"
-      sha256 "ae42e5970e24051170036e1ef1b42e8fa8c01d9f23ca08b050cb595f5e4634e2"
+      sha256 "82cd550f56599a972a131d7b9291f2d53f9812d0176a969db12d4f923cab01bd"
     end
 
     if Hardware::CPU.intel?
       url "https://gitlab.com/zillowe/zillwen/zusty/zoi/-/releases/Prod-Release-#{version}/downloads/zoi-macos-amd64.tar.zst"
-      sha256 "e2eced242d7d915b443309d97cb2ce6e9a4dc2292ee42a708103f30b866734ce"
+      sha256 "78394aa14acc025f210a984c5e1fb3773340b9baad334dc0f342ca77483ed090"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
       url "https://gitlab.com/zillowe/zillwen/zusty/zoi/-/releases/Prod-Release-#{version}/downloads/zoi-linux-amd64.tar.zst"
-      sha256 "31d67c1ffd6a7f47d04a868e6a9fad8bddabd7fd8d8f60c9fd8c442d676a58eb"
+      sha256 "b9a7c404903781fe7e39c0ae596665f34938a517e7b347bb9dd72feb8712edaf"
     end
 
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
       url "https://gitlab.com/zillowe/zillwen/zusty/zoi/-/releases/Prod-Release-#{version}/downloads/zoi-linux-arm64.tar.zst"
-      sha256 "363eac96b5936c3a6a336de7308dc9e39aed87515b53f24b156274c829393832"
+      sha256 "00737c0b6e4b21bf76cd12047341e339910a2c19ecf532b9101dca96d65a34fe"
     end
   end
 
   resource "zoi-man-1" do
     url "https://gitlab.com/zillowe/zillwen/zusty/zoi/-/releases/Prod-Release-#{version}/downloads/zoi.1"
-    sha256 "0491005803b4008a65f4212fe71b6799509e3495daddc74e9e431304980a88a8"
+    sha256 "25c8d794be1eb86b49bef22b5c0d88fa7f95eb55abb4b5aecf4350b5a2a5fbb0"
   end
 
   resource "zoi-rs-man-3" do
     url "https://gitlab.com/zillowe/zillwen/zusty/zoi/-/releases/Prod-Release-#{version}/downloads/zoi-rs.3"
-    sha256 "933885266ebc279499a1eeee43788be78aab1e80cff4e835fcd25553b9568a96"
+    sha256 "21e63e4d8162fb3009a2c9da810e61456e62885dd5165a07f34a91be949b12b5"
   end
 
   resource "zoi-lua-man-5" do
     url "https://gitlab.com/zillowe/zillwen/zusty/zoi/-/releases/Prod-Release-#{version}/downloads/zoi-lua.5"
-    sha256 "0cb4155df94a4c7b9d2c05551e1e9cf386857b6c679679d7c2b6110ae81ef941"
+    sha256 "8947ebad050b56e6968323648ee04138eb71d060faefd7f55339133d4d5247d0"
   end
 
   def install
